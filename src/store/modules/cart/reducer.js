@@ -1,17 +1,17 @@
 const cartReducer = (state = [], action) => {
-    switch (action.type) {
+  switch (action.type) {
     case "@cart/ADD":
-        const { product } = action;
-        return [...state, product];
-        
-    case "@cart/REMOVE":
-        const { id } = action;
-        const newList = state.filter( product => product.id !== id )
-        return newList;
-    
-        default:
-            return state;
-    }
-}
+      const { product } = action;
+      return [...state, product];
 
-export default cartReducer
+    case "@cart/REMOVE":
+      const { id } = action;
+      const newList = state.filter((product) => product.id !== id);
+      return newList;
+
+    default:
+      return state;
+  }
+};
+
+export default cartReducer;
