@@ -35,32 +35,24 @@ const Menu = () => {
         >
           <MenuIcon />
         </IconButton>
-
         <MenuItem onClick={() => sendTo("/")}>Loja</MenuItem>
         <Badge badgeContent={cart.length} color="error">
-          <MenuItem onClick={() => sendTo("/cart")}>Meus Pedidos</MenuItem>
+          <MenuItem onClick={() => sendTo("/cart")}>Pedidos</MenuItem>
         </Badge>
-        <MenuItem onClick={() => sendTo("/login")}>Login</MenuItem>
-        <MenuItem onClick={() => sendTo("/register")}>Registro</MenuItem>
         <Box sx={{ flexGrow: 1 }} />
+        <MenuItem onClick={() => sendTo("/login")}>Entrar</MenuItem>
+        <MenuItem onClick={() => sendTo("/register")}>Cadastro</MenuItem>
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
           <IconButton
-            size="medium"
+            size="small"
             aria-label="notifications"
             color="inherit"
             onClick={() => sendTo("/cart")}
           >
             <Badge badgeContent={cart.length} color="error">
-              <ShoppingCartIcon />
+              <ShoppingCartIcon /> Carrinho
             </Badge>
           </IconButton>
-          <IconButton
-            size="medium"
-            edge="end"
-            aria-label="account of current user"
-            aria-haspopup="true"
-            color="inherit"
-          ></IconButton>
         </Box>
       </Toolbar>
     </AppBar>
