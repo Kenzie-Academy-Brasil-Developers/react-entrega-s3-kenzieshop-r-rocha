@@ -35,14 +35,17 @@ const Menu = () => {
         >
           <MenuIcon />
         </IconButton>
+
         <MenuItem onClick={() => sendTo("/")}>Loja</MenuItem>
-        <MenuItem onClick={() => sendTo("/cart")}>Meus Pedidos</MenuItem>
+        <Badge badgeContent={cart.length} color="error">
+          <MenuItem onClick={() => sendTo("/cart")}>Meus Pedidos</MenuItem>
+        </Badge>
         <MenuItem onClick={() => sendTo("/login")}>Login</MenuItem>
         <MenuItem onClick={() => sendTo("/register")}>Registro</MenuItem>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
           <IconButton
-            size="large"
+            size="medium"
             aria-label="notifications"
             color="inherit"
             onClick={() => sendTo("/cart")}
@@ -52,7 +55,7 @@ const Menu = () => {
             </Badge>
           </IconButton>
           <IconButton
-            size="large"
+            size="medium"
             edge="end"
             aria-label="account of current user"
             aria-haspopup="true"

@@ -9,12 +9,12 @@ const Cart = () => {
 
   return (
     <>
-      <Typography omponent="h1" variant="h4" color="secondary">
+      <Typography component="h1" variant="h4">
         Carrinho de Compras
       </Typography>
       <div>
-        {cart.map((product) => (
-          <Product key={product.id} product={product} isRemovable />
+        {cart.map((product, index) => (
+          <Product key={index} product={product} isRemovable />
         ))}
       </div>
       <button
