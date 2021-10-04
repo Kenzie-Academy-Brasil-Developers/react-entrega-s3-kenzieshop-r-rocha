@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
+
+.container {
+    flex-direction: row;
+}
+
+h4 {
+    color: indigo;
+    font-family: 'Cabin Condensed'
+}
+
+/** button {
+    background-color: lavender;
+    border: 1px solid lavender;
+    border-radius: 25px;
+    font-family: 'Cabin Condensed';
+    font-size: 21px;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
+    padding: 10px 55px;
+}
+
+button:hover {
+    background-color: rgb(139,0,0);
+    color: white;
+    cursor: pointer;
+} */
+
+
+.btn-grad {background-image: linear-gradient(to right, #ff7e5f 0%, #feb47b  51%, #ff7e5f  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 35px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 27px;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
